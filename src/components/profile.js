@@ -1,3 +1,4 @@
+// first Task
 import PropTypes from 'prop-types';
 export const Profile = ({
   username,
@@ -34,7 +35,7 @@ export const Profile = ({
     </div>
   );
 };
-Profile.prototype = {
+Profile.propTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
@@ -43,6 +44,8 @@ Profile.prototype = {
   views: PropTypes.number,
   likes: PropTypes.number,
 };
+
+// second Task
 export const Statistics = ({ data }) => {
   return (
     <section className="statistics">
@@ -58,9 +61,11 @@ export const Statistics = ({ data }) => {
     </section>
   );
 };
-Statistics.prototype = {
+Statistics.propTypes = {
   data: PropTypes.array,
 };
+
+// third Task
 export const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
@@ -81,9 +86,10 @@ export const FriendList = ({ friends }) => {
     </ul>
   );
 };
-FriendList.prototype = {
+FriendList.propTypes = {
   data: PropTypes.array,
 };
+// fourth Task
 export const TransactionHistory = ({ transactions }) => {
   return (
     <table className="transaction-history">
@@ -106,6 +112,6 @@ export const TransactionHistory = ({ transactions }) => {
     </table>
   );
 };
-TransactionHistory.prototype = {
+TransactionHistory.propTypes = {
   data: PropTypes.array,
 };
